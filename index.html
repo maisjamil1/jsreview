@@ -9,8 +9,19 @@
 <p id="demo"></p>
 <p id="demo2" style="background-color: coral;"></p>
 <p id="demo3"></p>
-<del>mais</del>
+<h2 class="mai"></h2>
 
+
+
+
+
+
+
+
+
+
+<!-- //--------------------------------------------------------------------- -->
+<del>mais</del>
 <form action="">
   <input type="text" name="first" placeholder="firstname:" maxlength="2">
   <br>
@@ -31,6 +42,48 @@
 </select>
 <button type="button" onclick="document.getElementById('hi').style.color='red'">make hi red</button>
 <p id="hi">hi press ctrl shift j to display the console</p>
+<!-- //--------------------------------------------------------------------- -->
+<p>
+
+  isNaN(123) //false
+  isNaN(-1.23) //false
+  isNaN(5-2) //false
+  isNaN(0) //false
+  isNaN('123') //false
+  isNaN('Hello') //true
+  isNaN('2005/12/12') //true
+  isNaN('') //false
+  isNaN(true) //false
+  isNaN(undefined) //true
+  isNaN('NaN') //true
+  isNaN(NaN) //true
+  isNaN(0 / 0) //true
+
+</p>
+<br>
+<p>
+  console.log(typeof 42);
+// expected output: "number"
+<br>
+console.log(typeof 'blubber');
+// expected output: "string"
+<br>
+
+console.log(typeof true);
+// expected output: "boolean"
+<br>
+
+console.log(typeof undeclaredVariable);
+// expected output: "undefined";
+<br>
+
+typeof /regex/ === 'object'
+<br>typeof [1, 2, 4] === 'object'<br>
+typeof function() {} === 'function';
+<br>
+typeof NaN === 'number'
+</p>
+<!-- //--------------------------------------------------------------------- -->
 
 
 
@@ -59,8 +112,14 @@ function myFunction3(p1, p2) {
 document.getElementById("demo3").innerHTML = myFunction3(4, 3);
 // _________________________________________
 
-
-
+var m,a,i;
+m=10
+a=20
+i=30
+// document.getElementsByClassName('mai')[0].innerHTML=m*a*i;//the class was inside an arr
+// document.getElementsByTagName('h2')[1].innerHTML=m*a*i;//the class was inside an arr
+document.querySelector('.mai').innerHTML=m+a+'mais'+i+m;
+// _________________________________________
 
 </script>
 
