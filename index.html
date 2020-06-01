@@ -10,6 +10,14 @@
 <p id="demo2" style="background-color: coral;"></p>
 <p id="demo3"></p>
 <p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo8"></p>
+<p id="demo9" style="background-color: crimson;"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
 <h2 class="mai"></h2>
 
 
@@ -84,6 +92,12 @@ typeof function() {} === 'function';
 <br>
 typeof NaN === 'number'
 </p>
+<section style="background-color: cadetblue;">
+  Accessing Object Properties
+  <br>
+  dot notation//objectName.propertyName ----------bracket notation //objectName["propertyName"]
+  
+</section>
 <!-- //--------------------------------------------------------------------- -->
 
 
@@ -116,7 +130,7 @@ document.getElementById("demo3").innerHTML = myFunction3(4, 3);
 var m,a,i;
 m=10
 a=20
-i=parseInt(prompt('i=inter a number'))
+// i=parseInt(prompt('i=inter a number'))
 
 // document.getElementsByClassName('mai')[0].innerHTML=m*a*i;//the class was inside an arr
 // document.getElementsByTagName('h2')[1].innerHTML=m*a*i;//the class was inside an arr
@@ -146,7 +160,7 @@ switch (new Date().getDay()) {
 }
 
 document.getElementById("demo3").innerHTML = day+' day test';
-// _________________________________________
+// scope_________________________________________
 // var name1='ali'
 // console.log(name1);
 // function myname(){
@@ -158,7 +172,7 @@ document.getElementById("demo3").innerHTML = day+' day test';
 //   console.log(name1)
   //with var inside the function: ali ali osama ali
 
-  // _________________________________________
+  // scope_________________________________________
 // var name1='ali'
 // console.log(name1);
 // function myname(){
@@ -169,7 +183,7 @@ document.getElementById("demo3").innerHTML = day+' day test';
 //   myname();
 //   console.log(name1)
   // without var inside the function: ali ali osama osama
-  // _________________________________________
+  // scope_________________________________________
 // var t=1;
 // function testfunc(){
 //   var t=5,// if i remove var the second console will give me 7
@@ -178,18 +192,77 @@ document.getElementById("demo3").innerHTML = day+' day test';
 // }
 // testfunc();
 // console.log(t+2);
-  // _________________________________________
+  // scope_________________________________________
   var hh=1;
   function testparent(){
     var hh=5;
     function testchild(){
       var calcu=hh+2;
     }
-    return testchild();// to access to testchild function
+    return testchild();//i used return to get access to testchild function
      }
 testparent();
 console.log(hh+2);
+  //continue________________________________________
 
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+  if (i === 3) { continue; }
+  text += "continue test The number is " + i + "<br>";
+}
+document.getElementById("demo5").innerHTML = text;
+//object________________________________________________
+// Create an object:
+// var person1 = {
+//   firstName: "John",
+//   lastName : "Doe",
+//   id     : 5566,
+//   fullName : function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// };
+// // Display data from the object:
+// document.getElementById("demo6").innerHTML = person1.fullName()+'--- obj test ---'+ person1["lastName"];
+//---------------------------------------------------
+// function Person(first, last, age, eye) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.eyeColor = eye;
+// }
+
+// Person.prototype.name = function() {
+//   return this.firstName + " " + this.lastName
+// };
+
+// var myFather = new Person("John", "Doe", 50, "blue");
+// document.getElementById("demo7").innerHTML =
+// "My father is " + myFather.name(); 
+// console.log(myFather);
+
+//p.s :still i need to do an exercise about accessing
+//arr_____________________________________________________
+// var cars = new Array("Saab", "Volvo", "BMW");
+// cars[0] = "Opel";
+// document.getElementById("demo8").innerHTML = cars+' **arr test**';
+// =========
+// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// typeof fruits;    // returns object
+
+// Array.isArray(fruits);   // returns true
+// =========
+var fruits11 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo9").innerHTML = fruits11;
+document.getElementById("demo10").innerHTML = fruits11.pop();// shift() it will remove banana
+// document.getElementById("demo10").innerHTML = fruits11.unshift()here it will returns the length of the new array:;
+fruits11.unshift("Lemon");
+document.getElementById("demo11").innerHTML = fruits11;//Lemon,Banana,Orange,Apple
+
+
+
+// hoisting_______________________________________________
 
 
 
