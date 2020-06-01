@@ -146,7 +146,49 @@ switch (new Date().getDay()) {
 }
 
 document.getElementById("demo3").innerHTML = day+' day test';
+// _________________________________________
+// var name1='ali'
+// console.log(name1);
+// function myname(){
+//   var name1='osama'
+//   console.log(name1)
+// }
+//   console.log(name1)
+//   myname();
+//   console.log(name1)
+  //with var inside the function: ali ali osama ali
 
+  // _________________________________________
+// var name1='ali'
+// console.log(name1);
+// function myname(){
+//    name1='osama'
+//   console.log(name1)
+// }
+//   console.log(name1)
+//   myname();
+//   console.log(name1)
+  // without var inside the function: ali ali osama osama
+  // _________________________________________
+// var t=1;
+// function testfunc(){
+//   var t=5,// if i remove var the second console will give me 7
+//   calc=t+2;
+//   console.log(calc);
+// }
+// testfunc();
+// console.log(t+2);
+  // _________________________________________
+  var hh=1;
+  function testparent(){
+    var hh=5;
+    function testchild(){
+      var calcu=hh+2;
+    }
+    return testchild();// to access to testchild function
+     }
+testparent();
+console.log(hh+2);
 
 
 
