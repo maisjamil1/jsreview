@@ -9,6 +9,7 @@
 <p id="demo"></p>
 <p id="demo2" style="background-color: coral;"></p>
 <p id="demo3"></p>
+<p id="demo4"></p>
 <h2 class="mai"></h2>
 
 
@@ -115,11 +116,45 @@ document.getElementById("demo3").innerHTML = myFunction3(4, 3);
 var m,a,i;
 m=10
 a=20
-i=30
+i=parseInt(prompt('i=inter a number'))
+
 // document.getElementsByClassName('mai')[0].innerHTML=m*a*i;//the class was inside an arr
 // document.getElementsByTagName('h2')[1].innerHTML=m*a*i;//the class was inside an arr
 document.querySelector('.mai').innerHTML=m+a+'mais'+i+m;
 // _________________________________________
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
+
+document.getElementById("demo3").innerHTML = day+' day test';
+
+
+
+
+
+
+
+
+
 
 </script>
 
