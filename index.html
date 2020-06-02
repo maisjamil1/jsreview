@@ -17,7 +17,7 @@
 <p id="demo10"></p>
 <p id="demo11"></p>
 <p id="demo12"></p>
-<p id="demo13"></p>
+<p id="demo13" style="background-color: blueviolet;"></p>
 <h2 class="mai"></h2>
 
 
@@ -109,57 +109,57 @@ typeof NaN === 'number'
 
 
 
-function myFunction(p1, p2) {
-  return p1;
-}
-document.getElementById("demo").innerHTML = myFunction(4, 3);
-// _________________________________________
-function myFunction2(p1, p2) {
-  return p1+"<br>"+p2
+// function myFunction(p1, p2) {
+//   return p1;
+// }
+// document.getElementById("demo").innerHTML = myFunction(4, 3);
+// // _________________________________________
+// function myFunction2(p1, p2) {
+//   return p1+"<br>"+p2
  
-}
-document.getElementById("demo2").innerHTML = myFunction2(4, 3);
-// _________________________________________
-function myFunction3(p1, p2) {
-  return [p1,p2]
+// }
+// document.getElementById("demo2").innerHTML = myFunction2(4, 3);
+// // _________________________________________
+// function myFunction3(p1, p2) {
+//   return [p1,p2]
  
-}
-document.getElementById("demo3").innerHTML = myFunction3(4, 3);
+// }
+// document.getElementById("demo3").innerHTML = myFunction3(4, 3);
 // _________________________________________
 
-var m,a,i;
-m=10
-a=20
+// var m,a,i;
+// m=10
+// a=20
 // i=parseInt(prompt('i=inter a number'))
 
 // document.getElementsByClassName('mai')[0].innerHTML=m*a*i;//the class was inside an arr
 // document.getElementsByTagName('h2')[1].innerHTML=m*a*i;//the class was inside an arr
-document.querySelector('.mai').innerHTML=m+a+'mais'+i+m;
+// document.querySelector('.mai').innerHTML=m+a+'mais'+i+m;
 // _________________________________________
-switch (new Date().getDay()) {
-  case 0:
-    day = "Sunday";
-    break;
-  case 1:
-    day = "Monday";
-    break;
-  case 2:
-     day = "Tuesday";
-    break;
-  case 3:
-    day = "Wednesday";
-    break;
-  case 4:
-    day = "Thursday";
-    break;
-  case 5:
-    day = "Friday";
-    break;
-  case 6:
-    day = "Saturday";
-}
+// switch (new Date().getDay()) {
+//   case 0:
+//     day = "Sunday";
+//     break;
+//   case 1:
+//     day = "Monday";
+//     break;
+//   case 2:
+//      day = "Tuesday";
+//     break;
+//   case 3:
+//     day = "Wednesday";
+//     break;
+//   case 4:
+//     day = "Thursday";
+//     break;
+//   case 5:
+//     day = "Friday";
+//     break;
+//   case 6:
+//     day = "Saturday";
+// }
 
-document.getElementById("demo3").innerHTML = day+' day test';
+// document.getElementById("demo3").innerHTML = day+' day test';
 // scope_________________________________________
 // var name1='ali'
 // console.log(name1);
@@ -193,25 +193,95 @@ document.getElementById("demo3").innerHTML = day+' day test';
 // testfunc();
 // console.log(t+2);
   // scope_________________________________________
-  var hh=1;
-  function testparent(){
-    var hh=5;
-    function testchild(){
-      var calcu=hh+2;
-    }
-    return testchild();//i used return to get access to testchild function
-     }
-testparent();
-console.log(hh+2);
+  // var hh=1;
+  // function testparent(){
+  //   var hh=5;
+  //   function testchild(){
+  //     var calcu=hh+2;
+  //   }
+    // return testchild();//i used return to get access to testchild function
+    //  }
+// testparent();
+// console.log(hh+2);
+//************************
+//scope case1
+// function scopefuuun(dogy){
+//   function privetfunc(){
+//     var privetvar;
+//     privetvar='woooof';
+//     return dogy +'says'+privetvar
+//   }
+//   console.log(privetvar)//privetvar is not defined
+//   console.log('dogy is '+dogy);//nothing
+//   return privetfunc
+// }
+// scopefuuun('boo');
+
+//scope case2
+// function scopefuuun(dogy){
+//     privetvar='woooof';
+//   function privetfunc(){
+//     var privetvar;
+//     return dogy +'says'+privetvar
+//   }
+//   console.log(privetvar)//wooof
+//   console.log('dogy is '+dogy);//dogy is boo
+//   return privetfunc
+// }
+// scopefuuun('boo');
+
+
+//scope case3
+
+
+// function scopefuuun(dogy){
+//     var privetvar;
+//   function privetfunc(){
+//     privetvar='woooof';
+//     return dogy +'says'+privetvar
+//   }
+//   console.log(privetvar)//undefined
+//   console.log('dogy is '+dogy);//dogy is boo
+//   return privetfunc
+// }
+// scopefuuun('boo');
+
+//scop case 4
+// function scopefuuun(dogy){
+//     var privetvar;
+//     privetvar='woooof';
+//   function privetfunc(){
+//     return dogy +'says'+privetvar
+//   }
+//   console.log(privetvar)//woof
+//   console.log('dogy is '+dogy);//dogy is boo
+//   return privetfunc
+// }
+// scopefuuun('boo');
+
+//scop case 5
+// function scopefuuun(dogy){
+//       privetvar='woooof';
+//   function privetfunc(){
+//     var privetvar;
+//   console.log('mais')
+//     return 'print anything from inside the privetfunc'
+//   }
+//   console.log(privetvar)
+//   console.log('hhhh')
+//   console.log('dogy is '+dogy);
+//   console.log(privetfunc());//to show the privetfunc return content
+// }
+// scopefuuun('boo');
   //continue________________________________________
 
-var text = "";
-var i;
-for (i = 0; i < 10; i++) {
-  if (i === 3) { continue; }
-  text += "continue test The number is " + i + "<br>";
-}
-document.getElementById("demo5").innerHTML = text;
+// var text = "";
+// var i;
+// for (i = 0; i < 10; i++) {
+//   if (i === 3) { continue; }
+//   text += "continue test The number is " + i + "<br>";
+// }
+// document.getElementById("demo5").innerHTML = text;
 //object________________________________________________
 // Create an object:
 // var person1 = {
@@ -253,16 +323,18 @@ document.getElementById("demo5").innerHTML = text;
 
 // Array.isArray(fruits);   // returns true
 // =========
-var fruits11 = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo9").innerHTML = fruits11;
-document.getElementById("demo10").innerHTML = fruits11.pop();// shift() it will remove banana
+// var fruits11 = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo9").innerHTML = fruits11;
+// document.getElementById("demo10").innerHTML = fruits11.pop();// shift() it will remove banana
 // document.getElementById("demo10").innerHTML = fruits11.unshift()here it will returns the length of the new array:;
-fruits11.unshift("Lemon");
-document.getElementById("demo11").innerHTML = fruits11;//Lemon,Banana,Orange,Apple
+// fruits11.unshift("Lemon");
+// document.getElementById("demo11").innerHTML = fruits11;//Lemon,Banana,Orange,Apple
 
 
 
 // hoisting_______________________________________________
+// جملة var دايما بتطلع لفوق الا تحديد القيمة لازم يكون قبل الكونسول 
+//_______________________________________________________
 
 
 
