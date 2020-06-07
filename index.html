@@ -1,113 +1,227 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<h2>JavaScript Functions</h2>
+  <h2>JavaScript Functions</h2>
 
-<p>This example calls a function which performs a calculation, and returns the result:</p>
+  <p>This example calls a function which performs a calculation, and returns the result:</p>
 
-<p id="demo"></p>
-<p id="demo2" style="background-color: coral;"></p>
-<p id="demo3"></p>
-<p id="demo4"></p>
-<p id="demo5"></p>
-<p id="demo6"></p>
-<p id="demo8"></p>
-<p id="demo9" style="background-color: crimson;"></p>
-<p id="demo10"></p>
-<p id="demo11"></p>
-<p id="demo12"></p>
-<p id="demo13" style="background-color: blueviolet;"></p>
-<h2 class="mai"></h2>
+  <p id="demo"></p>
+  <p id="demo2" style="background-color: coral;"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+  <p id="demo8"></p>
+  <p id="demo9" style="background-color: crimson;"></p>
+  <p id="demo10"></p>
+  <p id="demo11"></p>
+  <p id="demo12"></p>
+  <p id="demo13" style="background-color: blueviolet;"></p>
+  <h2 class="mai"></h2>
 
-
-
-
-
+  <div id="show"></div>
+  <div class="hi"></div>
 
 
 
 
 
-<!-- //--------------------------------------------------------------------- -->
-<del>mais</del>
-<form action="">
-  <input type="text" name="first" placeholder="firstname:" maxlength="2">
+
+
+
+
+  <!-- //--------------------------------------------------------------------- -->
+  <del>mais</del>
+  <form action="">
+    <input type="text" name="first" placeholder="firstname:" maxlength="2">
+    <br>
+    <input type="text" name="second" placeholder="secondname:">
+    <br>
+    <input type="number" placeholder="no.">
+    <br>
+    <input type="password" placeholder="password">
+    <input type="file" placeholder="file">
+    <input type="color">
+    <input type="time">
+    <br>
+    <input type="checkbox">hi
+  </form>
+  <select name="test" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+  </select>
+  <button type="button" onclick="document.getElementById('hi').style.color='red'">make hi red</button>
+  <p id="hi">hi press ctrl shift j to display the console</p>
+  <!-- //--------------------------------------------------------------------- -->
+  <p>
+
+    isNaN(123) //false
+    isNaN(-1.23) //false
+    isNaN(5-2) //false
+    isNaN(0) //false
+    isNaN('123') //false
+    isNaN('Hello') //true
+    isNaN('2005/12/12') //true
+    isNaN('') //false
+    isNaN(true) //false
+    isNaN(undefined) //true
+    isNaN('NaN') //true
+    isNaN(NaN) //true
+    isNaN(0 / 0) //true
+
+  </p>
   <br>
-  <input type="text" name="second" placeholder="secondname:">
-  <br>
-<input type="number" placeholder="no.">
-<br>
-<input type="password" placeholder="password">
-<input type="file" placeholder="file">
-<input type="color" >
-<input type="time" >
-<br>
-<input type="checkbox">hi
-</form>
-<select name="test" id="">
-  <option value="">1</option>
-  <option value="">2</option>
-</select>
-<button type="button" onclick="document.getElementById('hi').style.color='red'">make hi red</button>
-<p id="hi">hi press ctrl shift j to display the console</p>
-<!-- //--------------------------------------------------------------------- -->
-<p>
+  <p>
+    console.log(typeof 42);
+    // expected output: "number"
+    <br>
+    console.log(typeof 'blubber');
+    // expected output: "string"
+    <br>
 
-  isNaN(123) //false
-  isNaN(-1.23) //false
-  isNaN(5-2) //false
-  isNaN(0) //false
-  isNaN('123') //false
-  isNaN('Hello') //true
-  isNaN('2005/12/12') //true
-  isNaN('') //false
-  isNaN(true) //false
-  isNaN(undefined) //true
-  isNaN('NaN') //true
-  isNaN(NaN) //true
-  isNaN(0 / 0) //true
+    console.log(typeof true);
+    // expected output: "boolean"
+    <br>
 
-</p>
-<br>
-<p>
-  console.log(typeof 42);
-// expected output: "number"
-<br>
-console.log(typeof 'blubber');
-// expected output: "string"
-<br>
+    console.log(typeof undeclaredVariable);
+    // expected output: "undefined";
+    <br>
 
-console.log(typeof true);
-// expected output: "boolean"
-<br>
+    typeof /regex/ === 'object'
+    <br>typeof [1, 2, 4] === 'object'<br>
+    typeof function() {} === 'function';
+    <br>
+    typeof NaN === 'number'
+  </p>
+  <section style="background-color: cadetblue;">
+    Accessing Object Properties
+    <br>
+    dot notation//objectName.propertyName ----------bracket notation //objectName["propertyName"]
 
-console.log(typeof undeclaredVariable);
-// expected output: "undefined";
-<br>
+  </section>
+  <!-- //--------------------------------------------------------------------- -->
 
-typeof /regex/ === 'object'
-<br>typeof [1, 2, 4] === 'object'<br>
-typeof function() {} === 'function';
-<br>
-typeof NaN === 'number'
-</p>
-<section style="background-color: cadetblue;">
-  Accessing Object Properties
-  <br>
-  dot notation//objectName.propertyName ----------bracket notation //objectName["propertyName"]
+
+
+
+
+
+  <script>
+    //var-let-const
+
+    // var x=4
+// var x=3
+// console.log(x);//3
+//=========================
+// var x=4//or let x=4 same result
+// let x=3
+// console.log(x);//Uncaught SyntaxError: Identifier 'x' has already been declared
+//=========================
+// var x=3
+// console.log(this.x);//3
+//=========================
+// let m=3
+// console.log(this.m);//undefined
+//=========================
+// console.log(t);//undefined
+// var t=6
+//=========================
+// t=6
+// console.log(t);//6
+// var t;
+//=========================
+// h=5
+// console.log(h);//Uncaught ReferenceError: Cannot access 'h' before initialization
+// let h;
+//=========================
+// console.log(h);//Uncaught ReferenceError: Cannot access 'h' before initialization
+// let h=5
+//=========================
+// let h;
+// h=5;
+// console.log(h);//5
+//=========================
+// let h=1;
+// h=5;
+// console.log(h);//5
+//===========================
+// const c;
+// c=5;
+// console.log(c);//Uncaught SyntaxError: Missing initializer in const declaration
+//===========================
+// const f=6;
+// console.log(f);//6
+//===========================
+// var c=4
+// let c =c+6
+// console.log(c);//Uncaught SyntaxError: Identifier 'c' has already been declared
+//===========================
+// function vartest(){
+//   var cc=1;
+//   if(true){
+//     var cc=4
+//     console.log('inside the function '+cc);//4
+    
+//   }
+//   console.log(cc);//4
+//   return 'done'
   
-</section>
-<!-- //--------------------------------------------------------------------- -->
+// }
+// console.log(vartest());//done
+//===========================
+// function lettest(){
+//   let ccl=1;
+//   if(true){
+//     let ccl=4
+//     console.log('inside the function '+ccl);//4
+    
+//   }
+//   console.log(ccl);//1
+//   return 'done'
+  
+// }
+// console.log(lettest());//done
+//===========================
+// const cc=33
+// console.log(cc);//33
+
+// function consttest(){
+//   const ccl=1;
+//   if(true){
+//    const ccl=4
+//     console.log('inside the function '+ccl);//4
+    
+//   }
+//   console.log(ccl);//1
+//   return 'done'
+  
+// }
+// console.log(consttest());//done
+//===========================
+// const Carr=[];
+// Carr=['w'];
+// console.log(Carr);//Uncaught TypeError: Assignment to constant variable.
+//===========================
+// const Carr=[];
+// Carr.push('w','f');
+// console.log(Carr);//["w", "f"]//same thing for objects i just can change the properties 
+   
 
 
 
 
 
 
-<script>
 
 
+
+
+
+
+
+//____________________________________________________________________________
 
 // function myFunction(p1, p2) {
 //   return p1;
@@ -116,13 +230,13 @@ typeof NaN === 'number'
 // // _________________________________________
 // function myFunction2(p1, p2) {
 //   return p1+"<br>"+p2
- 
+
 // }
 // document.getElementById("demo2").innerHTML = myFunction2(4, 3);
 // // _________________________________________
 // function myFunction3(p1, p2) {
 //   return [p1,p2]
- 
+
 // }
 // document.getElementById("demo3").innerHTML = myFunction3(4, 3);
 // _________________________________________
@@ -343,7 +457,7 @@ typeof NaN === 'number'
 
 
 
-</script>
+  </script>
 
 
 
@@ -359,4 +473,5 @@ typeof NaN === 'number'
 
 
 </body>
+
 </html>
